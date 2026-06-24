@@ -21,5 +21,5 @@ See [`exampleSite/`](./exampleSite) for a complete, working setup.
 
 ## License
 
-- [GNU GPL v3](./LICENSE), inherited from the original
-- [Researcher](https://github.com/ankitsultana/researcher) theme by Ankit Sultana.
+Licensed under [GNU GPL v3](./LICENSE), inherited from the original
+[Researcher](https://github.com/ankitsultana/researcher) theme by Ankit Sultana.
