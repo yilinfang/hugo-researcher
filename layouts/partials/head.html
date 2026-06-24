@@ -15,11 +15,8 @@
 <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ site.Title }}">
 {{- end }}
 
-{{ $opts := dict "transpiler" "libsass" "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" hugo.IsDevelopment }}
-{{- with resources.Get "scss/main.scss" }}
-{{- with . | toCSS $opts | fingerprint }}
+{{- with resources.Get "css/main.css" | fingerprint }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
-{{- end }}
 {{- end }}
 
 {{- with site.Params.favicon }}

@@ -1,14 +1,16 @@
 {
   "name": "hugo-researcher",
   "version": "0.1.0",
-  "description": "Formatting toolchain for the hugo-researcher theme.",
+  "description": "Build and formatting toolchain for the hugo-researcher theme.",
   "private": true,
   "license": "GPL-3.0",
   "scripts": {
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "build:css": "sass assets/scss/main.scss assets/css/main.css --style=compressed --no-source-map"
   },
   "devDependencies": {
-    "prettier": "3.8.4"
+    "prettier": "3.8.4",
+    "sass": "1.101.0"
   }
 }

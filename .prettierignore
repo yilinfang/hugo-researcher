@@ -10,6 +10,9 @@ node_modules/
 # Generated lockfile
 package-lock.json
 
+# Generated CSS — precompiled from assets/scss via `npm run build:css`
+assets/css/main.css
+
 # Hugo templates — left unformatted (Prettier's Go-template handling mangles
 # whitespace that is significant inside attribute values). Hand-authored.
 *.html

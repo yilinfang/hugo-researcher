@@ -9,13 +9,13 @@ Open Graph + Twitter card metadata.
 
 ## Requirements
 
-- **Hugo extended** (`>= 0.146.0`) — the theme compiles SCSS via Hugo's asset pipeline, which
-  requires the extended edition. (`hugo version` should contain `+extended`.)
+- **Hugo** (`>= 0.146.0`)
 
 ## Documentation
 
 - [Installation](docs/installation.md)
 - [Configuration](docs/configuration.md)
+- [Development](docs/development.md)
 
 See [`exampleSite/`](./exampleSite) for a complete, working setup.
 

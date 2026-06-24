@@ -45,7 +45,10 @@ URL helpers, so paths resolve correctly either way.
 ## Customization
 
 The accent (hyperlink) color and sizing live in `../assets/scss/_vars.scss` (`$accent`, `$image-size`, …).
+Because styles are **precompiled** to the committed `../assets/css/main.css`, changing them means
+editing the SCSS and regenerating that file with `npm run build:css` (see [Development](development.md)).
+If you consume the theme as a Hugo Module, override the styles with your own CSS instead.
 
-> **Note:** Styles are transpiled with the embedded LibSass, which Hugo deprecates in favor of Dart
-> Sass. The build works as-is (with a one-line deprecation notice). To silence it, install Dart Sass
-> and change `transpiler "libsass"` → `"dartsass"` in `../layouts/partials/head.html`.
+> **Note:** Building a site with this theme needs **no Sass toolchain** (neither LibSass nor Dart Sass)
+> and **not** Hugo's _extended_ edition — the committed `../assets/css/main.css` is served directly,
+> fingerprinted with Subresource-Integrity.
