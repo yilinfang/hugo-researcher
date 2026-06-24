@@ -1,0 +1,17 @@
+# Hugo build output & caches
+/public/
+/resources/
+.hugo_build.lock
+
+# exampleSite build output
+/exampleSite/public/
+/exampleSite/resources/
+
+# macOS
+.DS_Store
+
+# Node / formatting toolchain
+node_modules/
+
+# Personal dev tooling (not committed; required Hugo version is in the README)
+mise.toml

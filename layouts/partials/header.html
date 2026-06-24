@@ -1,0 +1,16 @@
+<div class="navbar container">
+    {{- with site.Params.ins_logo }}
+    <img id="ins-logo" src="{{ . | relURL }}" />
+    {{- end }}
+    <a id="author-name" class="alignable pull-left" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+    <ul id="navlist" class="alignable pull-right navbar-ul">
+        {{- $n := len site.Menus.main }}
+        {{- range $i, $e := site.Menus.main }}
+        <li class="alignable pull-left nav-list"><a {{ if .Params.newtab }}target="_blank" {{ end }}href="{{ .URL | relURL }}">{{ .Name }}</a>
+            {{- if ne (add $i 1) $n }}
+            /
+            {{- end }}
+        </li>
+        {{- end }}
+    </ul>
+</div>

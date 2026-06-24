@@ -1,0 +1,30 @@
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- $keywords := slice "researcher" }}
+{{- with site.Params.author }}{{ $keywords = $keywords | append . }}{{ end }}
+{{- $keywords = $keywords | append site.Title "hugo" | uniq }}
+<meta name="keywords" content="{{ delimit $keywords "," }}">
+{{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+{{ with or .Description site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+
+<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+{{- with .OutputFormats.Get "rss" }}
+<link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}
+
+{{ $opts := dict "transpiler" "libsass" "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" hugo.IsDevelopment }}
+{{- with resources.Get "scss/main.scss" }}
+{{- with . | toCSS $opts | fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{- end }}
+{{- end }}
+
+{{- with site.Params.favicon }}
+<link rel="icon" type="image/x-icon" href="{{ . | relURL }}">
+<link rel="shortcut icon" type="image/x-icon" href="{{ . | relURL }}">
+{{- end }}
+
+{{ partial "head-meta.html" . }}

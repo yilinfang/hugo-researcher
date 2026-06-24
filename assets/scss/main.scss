@@ -1,0 +1,4 @@
+// Entry point for the Researcher theme styles.
+// Processed by Hugo's asset pipeline (resources.Get | toCSS) — see layouts/partials/head.html.
+@import "vars";
+@import "style"; // _style.scss also pulls in typography + tables

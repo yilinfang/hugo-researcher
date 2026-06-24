@@ -1,0 +1,35 @@
+name = "Researcher"
+license = "GPL-3.0"
+licenselink = "https://github.com/yilinfang/hugo-researcher/blob/main/LICENSE"
+description = "A clean, single-column, monospace academic/résumé theme. Hugo port of the Researcher Jekyll theme — Inconsolata typography, bracketed [1] publication numbering, and a circular profile picture."
+homepage = "https://github.com/yilinfang/hugo-researcher"
+demosite = "https://github.com/yilinfang/hugo-researcher/tree/main/exampleSite"
+min_version = "0.146.0"
+tags = [
+  "academic",
+  "personal",
+  "minimal",
+  "researcher",
+  "resume",
+  "portfolio",
+  "scss",
+]
+features = [
+  "responsive",
+  "scss",
+  "rss",
+  "google-analytics",
+  "open-graph",
+  "twitter-cards",
+]
+
+[author]
+name = "Yilin Fang (Hugo port)"
+homepage = "https://github.com/yilinfang"
+
+# Credit to the original Jekyll theme this is ported from.
+[original]
+name = "Researcher"
+author = "Ankit Sultana"
+homepage = "https://ankitsultana.com/researcher"
+repo = "https://github.com/ankitsultana/researcher"

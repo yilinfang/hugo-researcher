@@ -1,0 +1,23 @@
+{{- $desc := or .Description site.Params.description -}}
+<!-- Facebook Open Graph -->
+<meta name="og:description" content="{{ $desc }}">
+<meta name="og:title" content="{{ site.Title }}">
+<meta name="og:url" content="{{ .Permalink }}">
+<meta name="og:type" content="article">
+{{- with or site.Params.og_image site.Params.profile_picture }}
+<meta name="og:image" content="{{ . | absURL }}">
+{{- end }}
+{{- with site.Params.facebook_id }}
+<meta name="fb:admins" content="{{ . }}">
+{{- end }}
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ site.Title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:url" content="{{ .Permalink }}">
+{{- with or site.Params.twitter_image site.Params.profile_picture }}
+<meta name="twitter:image" content="{{ . | absURL }}">
+{{- end }}
+{{- with site.Params.twitter_username }}
+<link rel="author" href="https://twitter.com/{{ . }}">
+{{- end }}

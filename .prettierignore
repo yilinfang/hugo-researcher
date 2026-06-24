@@ -1,0 +1,18 @@
+# Hugo build output
+public/
+resources/
+exampleSite/public/
+exampleSite/resources/
+
+# Dependencies
+node_modules/
+
+# Generated lockfile
+package-lock.json
+
+# Hugo templates — left unformatted (Prettier's Go-template handling mangles
+# whitespace that is significant inside attribute values). Hand-authored.
+*.html
+
+# TOML — formatted with taplo, not Prettier
+*.toml

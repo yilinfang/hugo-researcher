@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.Lang "en" }}">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+    <div class="wrapper">
+        {{ partial "header.html" . }}
+        <div style="clear:both"></div>
+        <hr>
+        <div class="container content{{ if .Params.is_contact }} contact{{ end }}">
+            {{ block "main" . }}{{ .Content }}{{ end }}
+            {{ partial "footer.html" . }}
+        </div>
+    </div>
+    {{ partial "analytics.html" . }}
+</body>
+</html>

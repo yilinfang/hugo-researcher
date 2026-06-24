@@ -1,0 +1,3 @@
+{{- $src := .Get "src" | default (.Get 0) -}}
+{{- $alt := .Get "alt" | default "" -}}
+<img class="profile-picture" src="{{ $src | relURL }}" alt="{{ $alt }}">

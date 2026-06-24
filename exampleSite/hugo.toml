@@ -1,0 +1,55 @@
+baseURL = "https://example.org/"
+locale = "en-us"
+title = "Researcher"
+theme = "hugo-researcher"
+
+# The original Researcher theme is a single-page résumé — no tags/categories.
+disableKinds = ["taxonomy", "term"]
+
+# Goldmark: pass raw HTML in markdown through (kramdown parity). Demo content is
+# author-controlled, so this is safe. Theme consumers who keep this false should
+# use the {{< profile-picture >}} shortcode for the profile image.
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+author = "Yilin Fang"
+description = "Personal site built with hugo-researcher — a Hugo port of the Researcher Jekyll theme."
+# keywords are derived from author + title automatically; override per-page via front matter.
+
+# Fallback image used for Open Graph / Twitter cards when og_image/twitter_image are unset.
+profile_picture = "/sherlock.jpg"
+
+footer = true
+footer_url = "https://github.com/yilinfang/hugo-researcher"
+footer_text = "Hugo port by Yilin Fang — original Researcher theme by Ankit Sultana"
+
+# --- Optional knobs (off by default, like the original _config.yml) ---
+# ins_logo = "/bits-logo.png"        # institute logo centered above the navbar
+# tracking_id = "G-XXXXXXXXXX"        # Google Analytics (gtag) measurement id
+# favicon = "/sherlock.jpg"
+# og_image = "/sherlock.jpg"
+# twitter_image = "/sherlock.jpg"
+# twitter_username = "ankitsultana"
+# facebook_id = "000000000000000"
+
+# Navigation bar. "Resume" opens in a new tab via the newtab param (the original
+# theme special-cased the "Resume" entry); any external link can set newtab = true.
+[[menu.main]]
+name = "About"
+url = "/"
+weight = 10
+
+[[menu.main]]
+name = "Resume"
+url = "/resume.pdf"
+weight = 20
+[menu.main.params]
+newtab = true
+
+[[menu.main]]
+name = "Contact"
+url = "/contact/"
+weight = 30
