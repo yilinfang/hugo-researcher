@@ -10,7 +10,7 @@ navigation. Key options (all optional unless noted):
 | `params.keywords`                                                        | Explicit `<meta name="keywords">`, replaces the fallback |
 | `params.description`                                                     | Default meta/OG description                              |
 | `params.profile_picture`                                                 | Fallback image for OG / Twitter cards                    |
-| `params.footer` / `footer_url` / `footer_text`                           | Footer line (set `footer = true` to show)                |
+| `params.footer_text` / `footer_url`                                      | Footer line; shown when `footer_text` set; link optional |
 | `params.ins_logo`                                                        | Optional institute logo centered above the navbar        |
 | `params.tracking_id`                                                     | Google Analytics (gtag) measurement id                   |
 | `params.favicon`                                                         | Favicon path                                             |

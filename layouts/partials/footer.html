@@ -1,6 +1,11 @@
-{{- if site.Params.footer }}
+{{- with site.Params.footer_text }}
 <hr />
 <p style="text-align: center; margin-bottom: 10px">
-<a href="{{ site.Params.footer_url }}" style="color: black"><small>{{ site.Params.footer_text }}</small></a>
+{{- $text := . }}
+{{- with site.Params.footer_url }}
+<a href="{{ . }}" style="color: black"><small>{{ $text }}</small></a>
+{{- else }}
+<small>{{ $text }}</small>
+{{- end }}
 </p>
 {{- end }}

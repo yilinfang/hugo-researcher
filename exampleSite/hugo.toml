@@ -25,9 +25,8 @@ description = "Personal site built with hugo-researcher — a Hugo port of the R
 # Fallback image used for Open Graph / Twitter cards when og_image/twitter_image are unset.
 profile_picture = "/sherlock.jpg"
 
-footer = true
 footer_url = "https://github.com/yilinfang/hugo-researcher"
-footer_text = "Hugo port by Yilin Fang — original Researcher theme by Ankit Sultana"
+footer_text = "Built with hugo-researcher"
 
 # --- Optional knobs (off by default, like the original _config.yml) ---
 # ins_logo = "/bits-logo.png"        # institute logo centered above the navbar
