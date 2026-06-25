@@ -21,3 +21,15 @@ Both `*.html` and `*.toml` are listed in `.prettierignore`.
 
 `mise.toml` is intentionally **not** committed (personal preference). The required Hugo version is
 documented in the README — do not re-add `mise.toml` to version control.
+
+## Releasing
+
+`CHANGELOG.md` follows [Keep a Changelog](https://keepachangelog.com/) and the repo is tagged with
+[Semantic Versioning](https://semver.org/) (`vX.Y.Z`). As you make user-facing changes, add entries
+under the `## [Unreleased]` heading. To cut a release:
+
+1. Rename `## [Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD` and add a fresh empty `## [Unreleased]`
+   above it.
+2. Update the compare links at the bottom of `CHANGELOG.md`.
+3. Bump `version` in `package.json` to match.
+4. Commit as `chore(release): vX.Y.Z`, then tag `vX.Y.Z`.
