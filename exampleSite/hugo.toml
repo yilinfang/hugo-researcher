@@ -17,7 +17,10 @@ unsafe = true
 [params]
 author = "Yilin Fang"
 description = "Personal site built with hugo-researcher — a Hugo port of the Researcher Jekyll theme."
-# keywords are derived from author + title automatically; override per-page via front matter.
+# <meta name="keywords">: set `keywords` here to control it explicitly (pages may extend it via their
+# own `keywords` front matter). If left unset everywhere, it falls back to "researcher", the author,
+# the site title, and "hugo".
+# keywords = ["machine learning", "distributed systems"]
 
 # Fallback image used for Open Graph / Twitter cards when og_image/twitter_image are unset.
 profile_picture = "/sherlock.jpg"

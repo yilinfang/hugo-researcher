@@ -2,10 +2,16 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{{- $keywords := slice "researcher" }}
-{{- with site.Params.author }}{{ $keywords = $keywords | append . }}{{ end }}
-{{- $keywords = $keywords | append site.Title "hugo" | uniq }}
-<meta name="keywords" content="{{ delimit $keywords "," }}">
+{{- /* Explicit keywords (site and/or page) win; the researcher/title set is only a fallback. */}}
+{{- $keywords := slice }}
+{{- with site.Params.keywords }}{{ $keywords = union $keywords . }}{{ end }}
+{{- with .Keywords }}{{ $keywords = union $keywords . }}{{ end }}
+{{- if not $keywords }}
+{{-   $keywords = slice "researcher" }}
+{{-   with site.Params.author }}{{ $keywords = $keywords | append . }}{{ end }}
+{{-   $keywords = $keywords | append site.Title "hugo" }}
+{{- end }}
+<meta name="keywords" content="{{ delimit ($keywords | uniq) "," }}">
 {{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 {{ with or .Description site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 

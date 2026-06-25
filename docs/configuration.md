@@ -3,17 +3,18 @@
 Mirror of the original theme's `_config.yml`, expressed as Hugo `[params]` and a `[[menu.main]]`
 navigation. Key options (all optional unless noted):
 
-| Param                                                                    | Purpose                                           |
-| ------------------------------------------------------------------------ | ------------------------------------------------- |
-| `title` (site)                                                           | Author name shown in the navbar                   |
-| `params.author`                                                          | `<meta name="author">` and keywords               |
-| `params.description`                                                     | Default meta/OG description                       |
-| `params.profile_picture`                                                 | Fallback image for OG / Twitter cards             |
-| `params.footer` / `footer_url` / `footer_text`                           | Footer line (set `footer = true` to show)         |
-| `params.ins_logo`                                                        | Optional institute logo centered above the navbar |
-| `params.tracking_id`                                                     | Google Analytics (gtag) measurement id            |
-| `params.favicon`                                                         | Favicon path                                      |
-| `params.og_image` / `twitter_image` / `twitter_username` / `facebook_id` | Social metadata                                   |
+| Param                                                                    | Purpose                                                  |
+| ------------------------------------------------------------------------ | -------------------------------------------------------- |
+| `title` (site)                                                           | Author name shown in the navbar                          |
+| `params.author`                                                          | `<meta name="author">` (and the keyword fallback)        |
+| `params.keywords`                                                        | Explicit `<meta name="keywords">`, replaces the fallback |
+| `params.description`                                                     | Default meta/OG description                              |
+| `params.profile_picture`                                                 | Fallback image for OG / Twitter cards                    |
+| `params.footer` / `footer_url` / `footer_text`                           | Footer line (set `footer = true` to show)                |
+| `params.ins_logo`                                                        | Optional institute logo centered above the navbar        |
+| `params.tracking_id`                                                     | Google Analytics (gtag) measurement id                   |
+| `params.favicon`                                                         | Favicon path                                             |
+| `params.og_image` / `twitter_image` / `twitter_username` / `facebook_id` | Social metadata                                          |
 
 Navigation is a standard Hugo menu. Add `newtab = true` to a menu entry's params to open it in a
 new tab (used for the Resume PDF):
@@ -41,6 +42,9 @@ URL helpers, so paths resolve correctly either way.
   (Raw `<img class="profile-picture">` HTML also works if `markup.goldmark.renderer.unsafe = true`.)
 - **Publications / references:** ordered markdown lists (`1.` `2.`) render as `[1]`, `[2]` automatically.
 - **Contact-style pages:** set `is_contact: true` in front matter to apply the contact content class.
+- **Per-page keywords:** add `keywords: ["…", "…"]` to a page's front matter to set or extend its
+  `<meta name="keywords">`. Any explicit keywords — here or in `params.keywords` — replace the automatic
+  `researcher` / author / title / `hugo` fallback entirely.
 
 ## Customization
 
