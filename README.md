@@ -3,10 +3,6 @@
 A [Hugo](https://gohugo.io/) port of the [Researcher](https://github.com/ankitsultana/researcher)
 Jekyll theme — a clean, single-column, monospace template for academic / personal résumé sites.
 
-Features Inconsolata typography, bracketed `[1] [2]` publication numbering (pure CSS counters),
-a circular profile picture, an optional institute logo, and configurable footer / analytics /
-Open Graph + Twitter card metadata.
-
 ## Requirements
 
 - **Hugo** (`>= 0.146.0`)
