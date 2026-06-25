@@ -1,6 +1,17 @@
 # AGENTS.md
 
-This is a [Hugo](https://gohugo.io/) port of theme [Researcher](https://github.com/ankitsultana/researcher).
+A [Hugo](https://gohugo.io/) port of the [Researcher](https://github.com/ankitsultana/researcher)
+Jekyll theme.
+
+## Styles
+
+CSS is **precompiled and committed**: `assets/css/main.css` is generated from the SCSS in
+`assets/scss/` by `npm run build:css`, and the templates load that committed file directly via
+`resources.Get` — there is no SCSS transpilation at Hugo build time (Hugo's deprecated LibSass path
+was dropped).
+
+After editing any `*.scss`, run `npm run build:css` and commit the regenerated `main.css` in the
+same change, or the rendered site won't reflect your edits.
 
 ## Formatting
 
@@ -14,8 +25,9 @@ pinned exactly in `package.json` and locked via `package-lock.json`.
   whitespace that is significant inside attribute values (e.g. a conditional CSS class). They are
   hand-authored — keep them tidy by hand.
 - **TOML (`*.toml`) is not formatted by Prettier** — use [taplo](https://taplo.tamasfe.dev/).
+- **The generated `assets/css/main.css` is not formatted** — it is build output (see Styles).
 
-Both `*.html` and `*.toml` are listed in `.prettierignore`.
+`*.html`, `*.toml`, and the generated `main.css` are all listed in `.prettierignore`.
 
 ## Tooling
 
@@ -24,11 +36,11 @@ documented in the README — do not re-add `mise.toml` to version control.
 
 ## Releasing
 
-`CHANGELOG.md` follows [Keep a Changelog](https://keepachangelog.com/) and the repo is tagged with
+`CHANGELOG.md` follows [Keep a Changelog](https://keepachangelog.com/) and releases are tagged with
 [Semantic Versioning](https://semver.org/) (`vX.Y.Z`). As you make user-facing changes, add entries
 under the `## [Unreleased]` heading. To cut a release:
 
-1. Rename `## [Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD` and add a fresh empty `## [Unreleased]`
+1. Rename `## [Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD`, then add a fresh empty `## [Unreleased]`
    above it.
 2. Update the compare links at the bottom of `CHANGELOG.md`.
 3. Bump `version` in `package.json` to match.
