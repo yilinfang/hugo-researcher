@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Inline and fenced code blocks now have dedicated Hugo-port styling, which was
+  not part of the initial Researcher theme. It uses a light palette matching the
+  theme's white/grey surfaces; the example site sets a light Chroma highlighting
+  style (`style = "github"`) so syntax-highlighted blocks stay on-theme.
+
 ## [0.3.0] - 2026-06-24
 
 ### Changed

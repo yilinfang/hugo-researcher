@@ -42,6 +42,16 @@ URL helpers, so paths resolve correctly either way.
   (Raw `<img class="profile-picture">` HTML also works if `markup.goldmark.renderer.unsafe = true`.)
 - **Publications / references:** ordered markdown lists (`1.` `2.`) render as `[1]`, `[2]` automatically.
 - **Contact-style pages:** set `is_contact: true` in front matter to apply the contact content class.
+- **Code blocks:** inline and fenced code are styled for the theme's light palette. Syntax-highlighting
+  colors come from Hugo's Chroma highlighter as inline styles, so the theme's CSS can't recolor them —
+  pick a **light** highlighting style in your site config to match (Hugo's default `monokai` is dark).
+  The example site uses:
+
+  ```toml
+  [markup.highlight]
+  style = "github" # or friendly, pastie, …
+  ```
+
 - **Per-page keywords:** add `keywords: ["…", "…"]` to a page's front matter to set or extend its
   `<meta name="keywords">`. Any explicit keywords — here or in `params.keywords` — replace the automatic
   `researcher` / author / title / `hugo` fallback entirely.

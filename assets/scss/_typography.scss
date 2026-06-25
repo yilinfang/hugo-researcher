@@ -57,4 +57,54 @@
     text-align: center;
     width: 100%;
   }
+
+  // Added for this Hugo port; the initial Researcher theme did not include code styles.
+  code {
+    padding: 0 3px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f8f8f8;
+    color: #272727;
+    font-family: inherit;
+    font-size: 0.95em;
+    overflow-wrap: break-word;
+  }
+
+  pre,
+  .highlight {
+    margin: 16px 0;
+  }
+
+  pre {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 16px;
+    overflow-x: auto;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #272727;
+    font-family: inherit;
+    font-size: 0.95em;
+    line-height: 1.45;
+    tab-size: 4;
+    -webkit-text-size-adjust: none;
+  }
+
+  .highlight pre {
+    margin: 0;
+  }
+
+  pre code {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    overflow-wrap: normal;
+  }
 }

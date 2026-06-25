@@ -39,6 +39,13 @@ Here is a blockquote
 
 > To a great mind, nothing is little
 
+Here is inline `code` and a fenced code block
+
+```python
+def greet(name):
+    return f"Hello, {name}!"
+```
+
 ## References
 
 - Foo Bar: Head of Department, Placeholder Names, Lorem

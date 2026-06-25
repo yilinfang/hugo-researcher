@@ -13,6 +13,11 @@ disableKinds = ["taxonomy", "term"]
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
+# Light, minimal Chroma highlighting style so fenced code blocks match the theme's
+# light palette. Hugo's default is the dark "monokai", which clashes with the
+# white background; consumers can pick any light style (github, friendly, pastie, …).
+[markup.highlight]
+style = "github"
 
 [params]
 author = "Yilin Fang"
