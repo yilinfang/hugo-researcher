@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-06-25
+
 ### Added
 
 - Inline and fenced code blocks now have dedicated Hugo-port styling, which was
@@ -53,7 +55,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - SCSS is precompiled to committed CSS and the deprecated LibSass path is dropped.
 
-[unreleased]: https://github.com/yilinfang/hugo-researcher/compare/v0.3.0...HEAD
+[unreleased]: https://github.com/yilinfang/hugo-researcher/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/yilinfang/hugo-researcher/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/yilinfang/hugo-researcher/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/yilinfang/hugo-researcher/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/yilinfang/hugo-researcher/releases/tag/v0.1.0
