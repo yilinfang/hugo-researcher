@@ -12,6 +12,7 @@ Jekyll theme — a clean, single-column, monospace template for academic / perso
 - [Installation](docs/installation.md)
 - [Configuration](docs/configuration.md)
 - [Development](docs/development.md)
+- [Changes from the original theme](docs/changes-from-original.md)
 
 See [`exampleSite/`](./exampleSite) for a complete, working setup.
 

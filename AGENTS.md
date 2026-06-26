@@ -34,6 +34,14 @@ pinned exactly in `package.json` and locked via `package-lock.json`.
 `mise.toml` is intentionally **not** committed (personal preference). The required Hugo version is
 documented in the README — do not re-add `mise.toml` to version control.
 
+## Divergences from the original
+
+`docs/changes-from-original.md` is a ledger of how this port intentionally differs from the upstream
+Researcher Jekyll theme (new features, changed defaults, dropped options, the committed-CSS build).
+When a change makes the theme behave differently from the original — not a routine bug fix or an
+internal refactor that preserves behavior — add an entry there in the same change, alongside the
+`CHANGELOG.md` entry, noting the version it lands in.
+
 ## Releasing
 
 `CHANGELOG.md` follows [Keep a Changelog](https://keepachangelog.com/) and releases are tagged with
