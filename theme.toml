@@ -19,6 +19,7 @@ features = [
   "scss",
   "rss",
   "google-analytics",
+  "google-search-console",
   "open-graph",
   "twitter-cards",
 ]

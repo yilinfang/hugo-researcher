@@ -36,6 +36,7 @@ footer_text = "Built with hugo-researcher"
 # --- Optional knobs (off by default, like the original _config.yml) ---
 # ins_logo = "/bits-logo.png"        # institute logo centered above the navbar
 # tracking_id = "G-XXXXXXXXXX"        # Google Analytics (gtag) measurement id
+# google_site_verification = "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"  # Google Search Console ownership verification
 # favicon = "/sherlock.jpg"
 # og_image = "/sherlock.jpg"
 # twitter_image = "/sherlock.jpg"

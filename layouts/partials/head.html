@@ -14,6 +14,7 @@
 <meta name="keywords" content="{{ delimit ($keywords | uniq) "," }}">
 {{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 {{ with or .Description site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+{{ with site.Params.google_site_verification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
 
 <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
 

@@ -13,6 +13,7 @@ navigation. Key options (all optional unless noted):
 | `params.footer_text` / `footer_url`                                      | Footer line; shown when `footer_text` set; link optional |
 | `params.ins_logo`                                                        | Optional institute logo centered above the navbar        |
 | `params.tracking_id`                                                     | Google Analytics (gtag) measurement id                   |
+| `params.google_site_verification`                                        | Google Search Console ownership verification meta tag    |
 | `params.favicon`                                                         | Favicon path                                             |
 | `params.og_image` / `twitter_image` / `twitter_username` / `facebook_id` | Social metadata                                          |
 
